@@ -518,6 +518,27 @@
 
 	};
 
+
+		// EventHandler - Form Submission
+
+	let loginForm = document.getElementById("footer");
+
+	loginForm.addEventListener("submit", function(event) {
+		event.preventDefault(); // Prevents the default form submission event
+	
+		let formData = new FormData(loginForm); // Creates a FormData object from our form
+		let formObject = {};
+	
+		// Converts FormData to a regular object for easier handling
+		for (let [key, value] of formData.entries()) {
+			formObject[key] = value;
+		}
+	
+		console.log(formObject); // Logs the form data to the console
+	});
+
+
+
 	/**
 	 * Moves elements to/from the first positions of their respective parents.
 	 * @param {jQuery} $elements Elements (or selector) to move.

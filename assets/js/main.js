@@ -168,7 +168,6 @@
 					enter: function() { $bg.addClass('active'); },
 					leave: function() { $bg.removeClass('active'); }
 				});
-
 		});
 
 })(jQuery);

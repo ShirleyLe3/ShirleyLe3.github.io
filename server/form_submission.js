@@ -19,10 +19,18 @@ app.post('/submit_form', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-      user: 'your_email@gmail.com', // Replace with your Gmail address
+      user: 'shirley.lee10100@gmail.com', // Replace with your Gmail address
       pass: 'your_password' // Replace with your Gmail password
     }
   });
+/*
+const transporter = nodemailer.createTransport({
+  service: process.env.NODEMAILER_SERVICE,
+  auth: {
+    user: process.env.NODEMAILER_USER,
+    pass: process.env.NODEMAILER_PASS
+  }
+}); */
 
   // Setup email data
   const mailOptions = {
